@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>
+
+<style>
+  body {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    /* warm romantic gradient */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffd1ff);
+    overflow: hidden;
+  }
+
+  /* floating soft hearts background */
+  body::before {
+    content: "❤ ❤ ❤ ❤ ❤ ❤ ❤ ❤";
+    position: absolute;
+    font-size: 40px;
+    color: rgba(255,255,255,0.25);
+    top: 10%;
+    left: 5%;
+    animation: floatHearts 10s infinite linear;
+  }
+
+  @keyframes floatHearts {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(40px); }
+    100% { transform: translateY(0); }
+  }
+
+  .container {
+    text-align: center;
+    z-index: 2;
+  }
+
+  h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 42px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  button {
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 999px;
+
+    cursor: pointer;
+    transition: 0.25s;
+
+    width: 180px;
+    height: 55px;
+
+    white-space: nowrap;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  #btnA {
+    background: linear-gradient(135deg, #ff74a0, #ff4782);
+    color: white;
+  }
+
+  #btnB {
+    background: linear-gradient(135deg, #7adbf8, #6164f4);
+    color: white;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  .message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+
+    border-radius: 20px;
+
+    display: none;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    animation: popup 0.3s ease;
+
+    z-index: 9999;
+  }
+  
+
+  .message-box button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #ffb6f0, #ff5db6);
+    color: white;
+  }
+
+  @keyframes popup {
+    from {
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <div id="messageBox" class="message-box">
+   <h2>UWAHHHH, THANK YOUUU SOOO MUCHHHH, NOONAA😻</h2>
+    <p>စိတ်ဆိုးပြေတဲ့အတွက်ကြောင့် ဟောဒီက ချစ်စရာအကောင်းးဆုံး ကျွန်တော့်အမျိုးသမီးလေးကို များးကြီးမှ များးးကြီး ကျေးဇူးတင်လိုက်ရပါတယ်ခင်ဗျ ချော့မော့ရှင်းပြသွားတာလေးတွေကိုလည်း
+    အများကြီးဖတ်ပေးလို့ ထပ်ပြီး ကျေးဇူးတင်ပါတယ်ခင်ဗျ ဒါလေးကို ဖတ်ပြီးနောက် ကိုယ့်မမအတွေးလွန်တာလေးတွေ အထင်လွဲတာလေးတွေ အနည်းနဲ့အများတော့ ပြေပျောက်သွားမယ်လို့ မျှော်လင့်မိပါတယ်ခင်ဗျ မမကလေးလေးအနေနဲ့လည်း ဟိုးအရင်က ဇွဲထက်အောင် လုပ်ခဲ့သလို အမှားတွေ မဖြစ်သင့်တာတွေ မလုပ်မိအောင် အကောင်းဆုံး အစွမ်းကုန်ကြိုးစားပါ့မယ်ခင်ဗျ အရမ်းးအရမ်းးလေးနဲ့မှချစ်တယ်ကျွန်တော့်ဇနီးလေးရေ အများးကြီးချစ်တယ်
+    သိပ်ချစ်တယ်မမရေ ရင်ထဲ အသဲနှလုံးလေးထဲကနေနှစ်နေအောင်ချစ်တယ်။ I LOVE YOUUUU VERRYYY VERYY MUCHH, SWEETHEART. 😽🤍</p>
+  <button onclick="closeMessage()"> I Love You Tooo 💘</button>
+</div>
+
+
+<div class="container">
+  <h1> မမဘေဘီလေးကို စိတ်ဆိုးပြေပေးပါတော့နော်အချစ်ဆုံးလေးးခင်ဗျာ 🙇🏻🫶🏻 </h1>
+
+  <div class="buttons">
+    <button id="btnA">စိတ်ဆိုးပြေပါပြီရှင့် 💖 </button>
+    <button id="btnB">မပြေသေးပါ။ 😭 </button>
+  </div>
+</div>
+
+
+<script>
+  const btnA = document.getElementById("btnA");
+  const btnB = document.getElementById("btnB");
+  const messageBox = document.getElementById("messageBox");
+
+  let sizeA = 1;
+  let sizeB = 1;
+
+  btnB.addEventListener("click", () => {
+
+    // Button A grows fast
+    sizeA += 0.3;
+    btnA.style.transform = `scale(${sizeA})`;
+
+    // Button B shrinks fast
+    sizeB -= 0.15;
+
+    if (sizeB <= 0) {
+      btnB.style.display = "none";
+    } else {
+      btnB.style.transform = `scale(${sizeB})`;
+    }
+  });
+
+  btnA.addEventListener("click", () => {
+    messageBox.style.display = "block";
+
+    sizeA = 1;
+    sizeB = 1;
+
+    btnA.style.transform = "scale(1)";
+    btnB.style.transform = "scale(1)";
+    btnB.style.display = "inline-block";
+  });
+
+  function closeMessage() {
+    messageBox.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
